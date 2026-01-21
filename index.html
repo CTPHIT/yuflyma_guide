@@ -2,14 +2,44 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Yuflyma_guide</title>
+  <title>Yuflyma_Guide</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      overflow: hidden; 
+    }
+    body {
+      display: flex;
+      flex-direction: column; 
+      background-color: #000; 
+    }
+
+    #videoPlayer {
+      width: 100%;
+      flex: 1; 
+      object-fit: contain;
+    }
+
+    .disclaimer {
+      text-align: center;
+      padding: 10px;
+      background-color: #fff; 
+      flex-shrink: 0;
+      margin: 0;
+      font-size: 14px;
+    }
+  </style>
 </head>
-<body style="margin:0; padding:0;">
-  <video id="videoPlayer" width="100%" height="auto" autoplay muted controls>
-  </video>
-    <p style="text-align: center; padding: 10px;">
-      ※“당사는 의료기관이 아니며, 해당 영상은 치료 목적이 아닌 보조적 건강관리 서비스를 목적으로 합니다. 환자는 별도의 보건의료전문가로부터 교육을 받아야 합니다.”
-    </p>
+<body>
+
+  <video id="videoPlayer" autoplay muted controls playsinline>
+    </video>
+
+  <p class="disclaimer">
+    ※“당사는 의료기관이 아니며, 해당 영상은 치료 목적이 아닌 보조적 건강관리 서비스를 목적으로 합니다. <br>환자는 별도의 보건의료전문가로부터 교육을 받아야 합니다.”
+  </p>
 
   <script>
     (function() {
