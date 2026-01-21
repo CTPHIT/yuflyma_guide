@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Yuflyma_guide</title>
+</head>
+<body style="margin:0; padding:0;">
+  <video id="videoPlayer" width="100%" height="auto" autoplay muted controls>
+  </video>
+    <p style="text-align: center; padding: 10px;">
+      ※“당사는 의료기관이 아니며, 해당 영상은 치료 목적이 아닌 보조적 건강관리 서비스를 목적으로 합니다. 환자는 별도의 보건의료전문가로부터 교육을 받아야 합니다.”
+    </p>
+
+  <script>
+    (function() {
+      const videoUrl = 'https://yuflyma-avi.s3.ap-northeast-2.amazonaws.com/yuflyma_guide.mp4';
+      const video = document.getElementById('videoPlayer');
+      const source = document.createElement('source');
+      source.src = videoUrl;
+      source.type = 'video/mp4';
+      video.appendChild(source);
+      video.load();
+    })();
+  </script>
+</body>
+</html>
